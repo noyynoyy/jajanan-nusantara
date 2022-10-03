@@ -1,0 +1,54 @@
+Scanner input = new Scanner(System.in);
+        String nama, mengulang;
+        int harga = 0, jumlah=0, uang, kembalian;
+        
+        do{
+        System.out.println("WELCOME TO JAJANAN NUSANTARA");
+        System.out.println("----------------");
+        System.out.print("Masukan nama anda: ");
+        nama = input.next();
+        System.out.print("Masukan alamat anda: ");
+        nama = input.next();
+        
+        System.out.println("PILIHAN");
+        System.out.println("1. Risol mayo...................Rp.2500");
+        System.out.println("2. Nagasari.....................Rp.3000");
+        System.out.println("3. Pisang goreng................Rp.2000");
+        System.out.println("4. Lemper.......................Rp.3000");
+        System.out.println("5. Donat salju..................Rp.3000");
+        System.out.println("6. Puding susu..................Rp.2000");
+        System.out.print("Masukan pilihan anda: ");
+        String makanan = input.next();
+        
+        switch(makanan){
+            case "1":harga = 2500;break;
+            case "2":harga = 3000; break;
+            case "3":harga=2000; break;
+            case "4":harga=3000;break;
+            case "5":harga=3000;break;
+            case "6":harga=2000;break;     
+        }
+        System.out.println("");
+        System.out.print("Jumlah yang anda inginkan: ");
+        jumlah = input.nextInt();
+        
+        System.out.print("Masukan uang anda: ");
+        uang = input.nextInt();
+        
+        if(uang>=harga){
+            kembalian = uang - (harga*jumlah);
+            System.out.println("Kembalian "+kembalian);
+        }else if(harga>uang){
+            System.out.println("Maaf uang anda kurang");
+        }
+        
+            System.out.println("Apakah anda ingin mengulang? ");
+            mengulang = input.next();
+        }while(mengulang.equalsIgnoreCase("iya"));
+        
+        
+        
+        
+    }
+    
+}
